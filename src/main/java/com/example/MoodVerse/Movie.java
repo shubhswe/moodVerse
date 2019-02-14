@@ -5,6 +5,7 @@ public class Movie {
     private String title;
     private long year;
     private Color color;
+    private String imdb;
 
     public String getTitle() {
         return title;
@@ -33,10 +34,11 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(String title, long year, Color color) {
+    public Movie(String title, long year, Color color, String imdb) {
         this.title = title;
         this.year = year;
         this.color = color;
+        this.imdb = imdb;
     }
 
 }//end of class
