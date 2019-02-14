@@ -26,17 +26,33 @@ body{
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-h1{
-font-family:'Pacifico';
-position:fixed;
-        left: 35%;
-        bottom:76%;
+.bio-content{
+font-family:'Josefin Sans';
+position:relative;
+        left: 0%;
+        bottom:70%;
 }
-h4{
-font-family:'Pacifico';
-position:fixed;
-        left: 35%;
-        bottom:65%;
+.bio-content2{
+font-family:'Josefin Sans';
+position:relative;
+        left: 0%;
+        bottom:38%;
+
+}
+#button1{
+background: #FF0000;
+}
+#button2{
+background: #FFA500;
+}
+#button3{
+background: #FFE700;
+}
+#button4{
+background: #9ACD32;
+}
+#button5{
+background: #2255A8;
 }
 
 section {
@@ -55,47 +71,51 @@ section {
 }
 .bgPulse span {
 	position: absolute;
-	width: 400px;
-    	height: 400px;
+	width: 200px;
+    	height: 200px;
     	border-radius: 50px;
-	background: red;
+	background: #FF0000;
 
 }
 .bgPulse span:nth-child(3n+1) {
-	background: green;
+	background: #FFA500;
 	border: 5px solid #fff;
 }
 
 .bgPulse span:nth-child(1) {
 	top: 50%;
 	left: 20%;
-	background: blue;
+	background: #FFE700;
 	animation: animate 10s linear infinite;
 }
 .bgPulse span:nth-child(2) {
 	top: 80%;
 	left: 40%;
-	background: orange;
+	background: #9ACD32;
 	animation: animate 12s linear infinite;
 }
 .bgPulse span:nth-child(3) {
 	top: 10%;
 	left: 65%;
+	background: #004400;
 	animation: animate 15s linear infinite;
 }
 .bgPulse span:nth-child(4) {
 	top: 50%;
 	left: 70%;
+	background:#87CEEB;
 	animation: animate 6s linear infinite;
 }
 .bgPulse span:nth-child(5) {
 	top: 10%;
 	left: 30%;
+	background: #9370DB;
 	animation: animate 9s linear infinite;
 }
 .bgPulse span:nth-child(6) {
 	top: 90%;
 	left: 95%;
+	background: #2255A8;
 	animation: animate 8s linear infinite;
 }
 .bgPulse span:nth-child(7) {
@@ -123,6 +143,84 @@ section {
 	left: 90%;
 }
 
+
+.bgPulse2 {
+	width: 100%;
+	height: 100%;
+}
+.bgPulse2 span {
+	position: absolute;
+	width: 200px;
+    	height: 200px;
+    	border-radius: 50px;
+	background: #FF0000;
+
+}
+.bgPulse2 span:nth-child(3n+1) {
+	background: #FFA500;
+	border: 5px solid #fff;
+}
+
+.bgPulse2 span:nth-child(1) {
+	top: 50%;
+	left: 20%;
+	background: #FFE700;
+	animation: animate 10s linear infinite;
+}
+.bgPulse2 span:nth-child(2) {
+	top: 80%;
+	left: 40%;
+	background: #9ACD32;
+	animation: animate 12s linear infinite;
+}
+.bgPulse2 span:nth-child(3) {
+	top: 10%;
+	left: 65%;
+	background: #004400;
+	animation: animate 15s linear infinite;
+}
+.bgPulse2 span:nth-child(4) {
+	top: 50%;
+	left: 70%;
+	background:#87CEEB;
+	animation: animate 6s linear infinite;
+}
+.bgPulse2 span:nth-child(5) {
+	top: 10%;
+	left: 30%;
+	background: #9370DB;
+	animation: animate 9s linear infinite;
+}
+.bgPulse2 span:nth-child(6) {
+	top: 90%;
+	left: 95%;
+	background: #2255A8;
+	animation: animate 8s linear infinite;
+}
+.bgPulse2 span:nth-child(7) {
+	top: 80%;
+	left: 5%;
+	animation: animate 5s linear infinite;
+}
+.bgPulse2 span:nth-child(8) {
+	top: 35%;
+	left: 50%;
+	animation: animate 14s linear infinite;
+}
+.bgPulse2 span:nth-child(9) {
+	top: 5%;
+	left: 5%;
+	animation: animate 11s linear infinite;
+}
+.bgPulse2 span:nth-child(10) {
+	top: 25%;
+	left: 90%;
+	animation: animate 10s linear infinite;
+}
+.bgPulse2 span:nth-child(10) {
+	top: 25%;
+	left: 90%;
+}
 @keyframes animate {
 	0% {
 		transform: scale(0) translateY(0) rotate(0deg);
@@ -161,3 +259,4 @@ section {
 	100% {
 		background: #f44336;
 	}
+
