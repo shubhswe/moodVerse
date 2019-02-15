@@ -63,6 +63,19 @@ import java.util.List;
 
         }
 
+        public Movie getMovie(int index){
+            Movie movie = null;
+            if(index >= 0 && index < movies.size()){
+                movie = movies.get(index);
+            }
+            else{
+                movie = null;
+            }
+            return movie;
+        }
 
+        public int size(){
+            return movies.size();
+        }
 
     }//last brace

@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>H O M E</title>
+    <title>Home Draft 2</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="..static/css/home.css" th:href="@{/css/home.css}">
 </head>
 <body>
+<div class="top">
+    <h1>MoodVerse</h1>
+</div>
+
+<form action = "colorCheck" method = "POST">
+<div class="container-fluid" >
+    <section>
+        <div class="bgPulse">
+<span>
+<button type="submit" name="color" value="red" id="button1"></button>
+</span>
+            <span>
+<button type="submit" name="color" value="orange" id="button2"></button>
+</span>
+            <span>
+<button type="submit" name="color" value="yellow" id="button3"></button>
+</span>
+            <span>
+<button type="submit" name="color" value="bright_green" id="button4"></button>
+</span>
+            <span>
+<button type="submit" name="color" value="dark_green" id="button5"></button>
+</span>
+            <span>
+<button type="submit" name="color" value="sky_blue" id="button6"></button>
+</span>
+            <span>
+<button type="submit" name="color" value="blue" id="button7"></button>
+</span>
+            <span>
+<button type="submit" name="color" value="purple" id="button8"></button>
+</span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+</div>
+</form>
+
+<div class="bottom">
+    <p>Junaid, Shubham, Irina, Joy</p>
+</div>
+
+</body>
+</html>
+
 
 </body>
 </html>

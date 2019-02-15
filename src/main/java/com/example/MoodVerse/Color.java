@@ -2,7 +2,7 @@ package com.example.MoodVerse;
 
 public enum Color {
 
-    NOCOLOR,           //default value when you dont know the emotion(start).
+    noColor,           //default value when you dont know the emotion(start).
     red, //ANGER,           // red #FF0000
     orange, //OPTIMISM,        // orange - #FFA500
     yellow, //JOY,             // yellow - #FFE700
