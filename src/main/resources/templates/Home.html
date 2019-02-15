@@ -8,16 +8,21 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="..static/css/home.css" th:href="@{/css/home.css}">
+
 </head>
 <body>
 <div class="top">
     <h1>MoodVerse</h1>
     <p th:text="${session.user.userName}"></p>
+
 </div>
+
+<h4><a href="/logOut">Logout</a></h4>
 
 <form action = "colorCheck" method = "POST">
 <div class="container-fluid" >
     <section>
+
         <div class="bgPulse">
 <span>
 <button type="submit" name="color" value="red" id="button1"></button>
@@ -54,7 +59,7 @@
 
 <div class="bottom">
     <p>Junaid, Shubham, Irina, Joy
-        <a href="/logOut">Logout</a>
+
     </p>
 </div>
 

@@ -53,6 +53,7 @@ public class moodController {
 
     }
 
+
 // THIS IS FOR HOME PAGE WHERE USER (GUEST OR LOGGED IN USER) CAN INPUT THERE COLOR/MOOD INFO
     @GetMapping("/colorCheck")
     public String startSession(HttpSession session){
@@ -93,4 +94,15 @@ public class moodController {
 
         return "login";
     }
+
+    @GetMapping("/Profile")
+    public String gotoProfile(){
+        return "Profile";
+    }
+
+    @GetMapping("/About")
+    public String gotoPresentation(){
+        return "Presentation";
+    }
+
 }

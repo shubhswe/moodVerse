@@ -5,6 +5,15 @@ public class Movie {
     private String title;
     private long year;
     private Color color;
+
+    public String getImdb() {
+        return imdb;
+    }
+
+    public void setImdb(String imdb) {
+        this.imdb = imdb;
+    }
+
     private String imdb;
 
     public String getTitle() {
