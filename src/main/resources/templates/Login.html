@@ -36,7 +36,7 @@
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="yourmail@example.com" name="userName"
-                                           type="text" value="username">
+                                           type="text" value="Username">
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="passWord" type="password"
@@ -58,7 +58,12 @@
                         <hr/>
                         <center><h5>OR</h5></center>
 
-                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Continue as guest">
+                        <form accept-charset="UTF-8" role="form" action = "login" method ="POST">
+                            <input type="hidden" name="userName" value="Guest">
+                            <input type="hidden" name="passWord" value="guest">
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Continue as guest">
+                        </form>
+
                     </div>
                 </div>
             </div>

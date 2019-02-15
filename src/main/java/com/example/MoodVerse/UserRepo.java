@@ -38,8 +38,8 @@ public class UserRepo {
     }
 
     public User verification(User inData){
-        User outData = users.get(0);//create it in the beginning
-        System.out.println("verify: "+outData.getUserName());
+        User outData = null;//users.get(0);//create it in the beginning
+        //System.out.println("verify: "+outData.getUserName());
         for(User m:this.users){
             System.out.println("in the loop "+m.getUserName());
             if( (inData.getUserName().equals(m.getUserName())) && (inData.getPassword().equals(m.getPassword())) ){
@@ -59,7 +59,7 @@ public class UserRepo {
                 outData = m;
             }
             else {
-                outData = this.users.get(0); //return guest user
+                outData = null;//this.users.get(0); //return guest user
             }
         }
 

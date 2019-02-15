@@ -12,6 +12,7 @@
 <body>
 <div class="top">
     <h1>MoodVerse</h1>
+    <p th:text="${session.user.userName}"></p>
 </div>
 
 <form action = "colorCheck" method = "POST">
@@ -47,10 +48,14 @@
         </div>
     </section>
 </div>
+
+
 </form>
 
 <div class="bottom">
-    <p>Junaid, Shubham, Irina, Joy</p>
+    <p>Junaid, Shubham, Irina, Joy
+        <a href="/logOut">Logout</a>
+    </p>
 </div>
 
 </body>

@@ -22,7 +22,7 @@ public class moodController {
 // THIS IS FOR LOGIN PAGE WHERE USERS VERIFICATION IS TAKING PLACE
     @GetMapping("/login")
     public String loginUser(HttpSession session){
-        //initate a guest user.
+       //initate a guest user.
         return "Login";
     }
 
@@ -33,15 +33,20 @@ public class moodController {
 
         User CurrentUser = userRepo.verification(inUser);
 
+        if(CurrentUser == null){
+            return "login";
+        }
+
         System.out.println("this is current user: "+CurrentUser.getUserName()+" "+CurrentUser.getPassword());
         if(CurrentUser.getUserName() == "Guest"){
             System.out.println("nahen milla!");
+            session.setAttribute("user",CurrentUser); // add Guest user to the session by default
             return "Home";
         }
         else
         {
             System.out.println("Mill gaya");
-            session.setAttribute("user",CurrentUser);//add user to the session
+            session.setAttribute("user",CurrentUser);//add logged in user to the session
             return "Home";
 
         }
@@ -58,13 +63,34 @@ public class moodController {
     @PostMapping("/colorCheck")
     public String duringSession(HttpSession session, @RequestParam Color color){
        User userData = (User)session.getAttribute("user");
+       if(userData == null){
+           return "login";
+       }
+        userData.setMoodHistory(color);
         System.out.println("user logged in : "+userData.getUserName());
         //Movie userData;
+        ArrayList<Movie> resultMovie = new ArrayList<>();
         for(int i=0; i<repository.size(); i++){
            if(repository.getMovie(i).getColor()==color){
+               resultMovie.add(repository.getMovie(i));
                System.out.println("found a match: "+repository.getMovie(i).getTitle());
+
+
            }
         }
-        return "Home";
+        session.setAttribute("user",userData);
+        session.setAttribute("MovieArray",resultMovie);
+        return "Results";
+    }
+
+    //THIS IS FOR LOGGING OUT FROM THE WEBSITE AND GOTO LOGIN:
+    @GetMapping("/logOut")
+    public String logOut(HttpSession session){
+        session.removeAttribute("user");         //remove the user
+        session.removeAttribute("MovieArray");   //remove the data
+
+        session.invalidate();
+
+        return "login";
     }
 }
